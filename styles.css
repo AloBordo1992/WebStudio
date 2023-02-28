@@ -38,11 +38,6 @@ img {
 button {
     cursor: pointer;
 }
-ul {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-}
 .list {
     list-style-type: none;
     margin: 0;
@@ -51,6 +46,7 @@ ul {
 .link {
     text-decoration: none;
     color: currentColor;
+    
 }
 
 /* reset end */
@@ -77,7 +73,7 @@ body {
     
     @media screen and (min-width:768px) {
         .container {
-          max-width: 768px;
+            max-width: 768px;
         }
     }
     
@@ -93,78 +89,4 @@ body {
 header {
     border-bottom: 1px solid #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-    }
-.container-header {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    padding-top: 24px;
-    padding-bottom: 24px;    
 }
-.logo {
-    font-family: 'Raleway';
-    font-weight: 800;
-    font-size: 18px;
-    line-height: calc(21 / 18);
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--iris);
-    }        
-.logo-heder {
-    color: var(--navy_blue);
-    }
-.flexbox-nav {
-    display: none;
-}
-.stail-nav{
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    color: var(--navy-blue);
-    padding: 24px 0px;
-    position: relative;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.flexbox-contakts {
-    display: none; 
-}
-.stail-nav:hover,
-.stail-nav:focus,
-.stail-contacts:hover,
-.stail-contacts:focus
- {
-color: var(--iris);
-}
-.nav.current::after {
-content: '' ;
-position: absolute;
-display: block;
-bottom: 0;
-width: 100%;
-height: 4px;
-border-radius: 2px;
-background-color: var(--hover-bt);
-}
-@media screen and (min-width:768px) {
-    .flexbox-nav{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 40px;
-    }
-    .flexbox-contakts {
-        display: flex; 
-        flex-direction: column;
-    }
-    .btn-nav-mob{
-        display: none;
-    }
-}
-@media screen and (min-width: 1200px) {
-    @media screen and (min-width: 1200px) {
-        .flexbox-contakts {
-            display: flex; 
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-      }
-  }
