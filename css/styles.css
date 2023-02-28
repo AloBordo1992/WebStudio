@@ -62,7 +62,7 @@ body {
     line-height: calc(24 / 16);
     letter-spacing: 0.02em;
     color: var(--primary-txt-cl);
-    }
+}
 .container {
     min-width: 320px;
     max-width: 428px;
@@ -90,7 +90,7 @@ body {
     }
     
     /* header */
-header {
+.page-header {
     border-bottom: 1px solid #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
     }
@@ -134,16 +134,74 @@ header {
  {
 color: var(--iris);
 }
-.nav.current::after {
-content: '' ;
-position: absolute;
-display: block;
-bottom: 0;
-width: 100%;
-height: 4px;
-border-radius: 2px;
-background-color: var(--hover-bt);
+.stail-nav.current::after {
+    content: '' ;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--ocean);
 }
+.menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+}
+.menu-toggle:hover,
+.menu-toggle:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 32px;
+    background-color: #3f51b5;
+    z-index: 999;
+  
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+  }
+  
+  .menu-container.is-open {
+    transform: translateX(0);
+  }
+  
+  .menu-container .menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: #fff;
+  }
+  
+  .mobile-menu {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .mobile-menu .link {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
 @media screen and (min-width:768px) {
     .flexbox-nav{
         display: flex;
@@ -154,7 +212,7 @@ background-color: var(--hover-bt);
         display: flex; 
         flex-direction: column;
     }
-    .btn-nav-mob{
+    .menu-toggle{
         display: none;
     }
 }
