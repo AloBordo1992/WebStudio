@@ -23,25 +23,6 @@
         <a class="logo link" href="./index.html"
               >Web<span class="logo-heder">Studio</span></a
             >
-        <button class="button-hamburger"
-          type="button"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-          >
-            <svg
-              width="24"
-              height="24"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-        </button>    
         <nav class="nav-heder ">
         <ul class="list flexbox-nav">
           <li>
@@ -67,18 +48,30 @@
             </li>
         </ul>
         </address>
-      </div>
-    </header>
-    <main>
 
-    </main>
-    <footer>
-
-    </footer>
-    
-     <!-- Mobile menu -->
+        <!-- BTN menu  -->
+      <button class="button-hamburge js-open-menu"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        >
+          <svg
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+      </button>    
+      <!-- Mobile menu -->
      <div class="menu-container js-menu-container" id="mobile-menu">
-      <button class="menu-toggle js-close-menu">
+        <button class="menu-toggle js-close-menu">
         <svg
           fill="#000000"
           viewBox="0 0 20 20"
@@ -92,7 +85,7 @@
             clip-rule="evenodd"
           ></path>
         </svg>
-      </button>
+        </button>
 
       <ul class="mobile-menu">
         <li>
@@ -166,9 +159,16 @@
           </a>
         </li>
       </ul>
-    </div>
+     </div>
+      </div>
+    </header>
+    <main>
 
-    <script
+    </main>
+    <footer>
+
+    </footer>
+      <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
@@ -176,5 +176,5 @@
     ></script>
     <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
-
+</body>
 </html>
