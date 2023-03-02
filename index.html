@@ -97,64 +97,48 @@
         <li>
           <a href="/" class="nav-link">Contacts</a>
         </li>
-      </ul>
-
+       </ul>
       <ul class="address-menu">
         <li class="contact-tel">
-          <a href="tel:+110001111111" class="tel-link">+11 (000) 111-11-11</a>
+          <a href="tel:+110001111111" class="tel-link link">+11 (000) 111-11-11</a>
         </li>
         <li class="contact-adr">
-          <a href="mailto:info@devstudio.com" class="contact-link"
+          <a href="mailto:info@devstudio.com" class="contact-link link"
             >info@devstudio.com</a
           >
         </li>
       </ul>
-      <ul class="social-mobile list">
-        <li class="social-item">
+      <ul class="socials list">
+        <li>
           <a
-            class="social-link-mobile"
+            class="socials-link"
             href="https://instagram.com"
             rel="noopener noreferrer"
-            aria-label="instagram link"
+            aria-label="Instagram link"
           >
-            <svg class="social-icon-mobile" width="24" height="24">
-              <use href="./images/icons.svg#icon-instagram-2"></use>
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./image/icons.svg#icon-instagram-2"></use>
             </svg>
           </a>
         </li>
-        <li class="social-item">
-          <a
-            class="social-link-mobile"
-            href="https://twitter.com"
-            rel="noopener noreferrer"
-            aria-label="twitter link"
-          >
-            <svg class="social-icon-mobile" width="24" height="24">
-              <use href="./images/icons.svg#icon-twitter-1"></use>
+        <li>
+          <a class="socials-link" href aria-label="Twitter link">
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./image/icons.svg#icon-twitter"></use>
             </svg>
           </a>
         </li>
-        <li class="social-item">
-          <a
-            class="social-link-mobile"
-            href="https://facebook.com"
-            rel="noopener noreferrer"
-            aria-label="facebook link"
-          >
-            <svg class="social-icon-mobile" width="24" height="24">
-              <use href="./images/icons.svg#icon-facebook-1"></use>
+        <li>
+          <a class="socials-link" href aria-label="Facebook link">
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./image/icons.svg#icon-facebook"></use>
             </svg>
           </a>
         </li>
-        <li class="social-item">
-          <a
-            class="social-link-mobile"
-            href="https://linkedin.com/"
-            rel="noopener noreferrer"
-            aria-label="linkedin link"
-          >
-            <svg class="social-icon-mobile" width="24" height="24">
-              <use href="./images/icons.svg#icon-linkedin-1"></use>
+        <li>
+          <a class="socials-link" href aria-label="Linkedin link">
+            <svg class="socials-icon" width="24" height="16">
+              <use href="./image/icons.svg#icon-linkedin"></use>
             </svg>
           </a>
         </li>
@@ -163,17 +147,115 @@
       </div>
     </header>
     <main>
-
+      <section class="hero ">
+        <div class="fon-hero container">
+          <h1 class="hero-title">
+            Effective Solutions <br />
+            for Your Business
+          </h1>
+          <button type="button" data-modal-open class="button-stile">
+            Order Servise
+          </button>
+        </div>  
+      </section>
     </main>
     <footer>
 
     </footer>
-      <script
+    <!-- modal-hero -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>
+          <svg class="modal-icon" width="8" height="8">
+            <use href="./image/checkbox.svg#icon-close"></use>
+          </svg>
+        </button>
+        <strong class="modal-title"
+          >Leave your contacts and we will call you back</strong
+        >
+
+        <form name="modal_form" autocomplete="on">
+          <!-- Name field -->
+          <label class="modal-form-label" name="user_name" for="user_sign"
+            >Name</label
+          >
+          <div class="modal-form-group">
+            <input
+              class="modal-form-input"
+              type="text"
+              id="user_sign"
+              required
+            />
+            <svg class="modal-form-icon" width="18" height="24">
+              <use href="./image/icons.svg#user-name"></use>
+            </svg>
+          </div>
+          <!-- Phone field -->
+          <label class="modal-form-label" for="user_telephone"
+            >Phone</label
+          >
+          <div class="modal-form-group">
+            <input
+              class="modal-form-input"
+              type="tel"
+              id="user_telephone"
+              required
+            />
+            <svg class="modal-form-icon" width="18" height="24">
+              <use href="./image/icons.svg#user-phone"></use>
+            </svg>
+          </div>
+          <!-- Email field -->
+          <label class="modal-form-label" for="user_email">Email</label>
+          <div class="modal-form-group">
+            <input
+              class="modal-form-input"
+              type="email"
+              id="user_email"
+              required
+            />
+            <svg class="modal-form-icon" width="18" height="24">
+              <use href="./image/icons.svg#user-email"></use>
+            </svg>
+          </div>
+          <!-- Comment field -->
+          <label class="modal-form-label" for="user_comment"
+            >Comment</label
+          >
+          <textarea
+            class="modal-form-comment"
+            name="user_comment"
+            id="user_comment"
+            rows="6"
+            placeholder="Type your comment..."
+          ></textarea>
+          <!-- Checkbox field -->
+          <div class="form-checkbox">
+            <input
+              class="form-checkbox-input"
+              type="checkbox"
+              name="user_checkbox"
+              id="user_checkbox"
+              required
+            />
+            <label class="form-checkbox-label" for="user_checkbox"
+              >I accept the terms and conditions of the
+              <a class="modal-form-link link" href="" target="_blank"
+                >Privacy Policy</a
+              ></label
+            >
+          </div>
+          <button class="contact-form-btn btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"
-    ></script>
+    >
+    </script>
     <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
