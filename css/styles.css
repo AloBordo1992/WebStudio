@@ -71,8 +71,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     
-    outline: 2px solid red;
-    outline-offset: -2px;
+    /* outline: 2px solid red;
+    outline-offset: -2px; */
     }
     
     @media screen and (min-width:768px) {
@@ -89,7 +89,11 @@ body {
       }  
     }
     
-    /* header */
+ /**
+  |============================
+  | Memu heder
+  |============================
+*/
 
 .container-header {
     display: flex;
@@ -182,18 +186,38 @@ color: var(--iris);
             }
     }
   }
-   /**
+/**
   |============================
-  | Memu heder
+  | Memu heder mobail
   |============================
 */
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color:  #FFFFFF;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+.menu-container.is-open {
+  transform: translateX(0);
+}
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 48px;
+  right: 48px;
+  color: #fff;
+}
 .menu-toggle {
     min-height: 24px;
     min-width: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin: 0;
     padding: 0;
     background-color:#E7E9FC;
@@ -202,82 +226,57 @@ color: var(--iris);
     border-radius: 50%;
     outline: none;
 }
-
-@media (min-width: 768px) {
-    .menu-toggle {
-        display: none;
-    }
-}
-
 .menu-toggle:hover,
 .menu-toggle:focus {
-    background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
-
 .menu-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    padding: 32px;
-    background-color: var(--accent-txt-cl);
-    z-index: 999;
-
-    transform: translateX(100%);
-    transition: transform 250ms ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color:  #FFFFFF;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
 }
-
-.menu-container.is-open {
-    transform: translateX(0);
-}
-
-.menu-container .menu-toggle {
-    position: absolute;
-    top: 48px;
-    right: 48px;
-    color: #fff;
-}
-
-
 .mobile-menu {
-    display: flex;
-    gap: 40px;
-    flex-direction: column;
-    padding: 0;
-    margin: 80px 0px 0px 40px;
-    list-style: none;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  padding: 0;
+  margin: 80px 0px 0px 40px;
+  list-style: none;
 }
 .address-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 40px;
-    list-style: none;
-    margin-top: 284px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 40px;
+  list-style: none;
+  margin-top: 284px;
 }
-
 .mobile-menu .nav-link {
-    display: block;
-    padding: 10px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: calc(40 / 36);
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: var(--slate);
-    text-decoration: none;
+  display: block;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(40 / 36);
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--navy_blue);
+  text-decoration: none;
 }
-
 .tel-link {
-font-weight: 600;
-    font-size: 36px;
-    line-height: calc(40 / 36);
-    color: var(--slate);
-    text-decoration: none;
+  font-weight: 600;
+  font-size: 36px;
+  color: var(--iris);
+  line-height: calc(40 / 36);
+  text-decoration: none;
 }
-
 .contact-link {
     font-weight: 500;
     font-size: 20px;
@@ -295,34 +294,12 @@ font-weight: 600;
     gap: 56px;
     margin-top: 48px;
 }
-
-.social-icon-mobile {
-    fill: var(--accent-txt-cl);
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
 }
 
-.social-link-mobile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: background-color;
-    background-color: var(--secondary-bg-cl);
-}
-
-.social-link-mobile:hover,
-.social-link-mobile:focus,
-.contact-link:hver,
-.contact-link:focus,
-.tel-link:hover,
-.tel-link:focus,
-.nav-link:hover,
-.nav-link:focus {
-    background-color:var(--hover-bt);
-}
   /**
   |============================
   | Hero section
@@ -364,10 +341,10 @@ font-weight: 600;
     font-size: 40px;
     line-height: calc(40 / 36);
     letter-spacing: 0.02em;
-    color: var(--accent-txt-cl);
-    /*позиціювання*/
-    text-align: center; /*розміщення тексту по центру*/
-    margin-bottom: 48px; /*нижній відступ від рамки*/
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 48px;
+    text-transform: capitalize;
   }
   .button-stile {
     border: none;
@@ -377,7 +354,7 @@ font-weight: 600;
     font-size: 16px;
     line-height: calc(24 / 16);
     letter-spacing: 0.04em;
-    color: var(--accent-txt-cl);
+    color:  #FFFFFF;
     display: block;
     padding: 16px 32px;
     margin: 0px auto;
@@ -412,6 +389,7 @@ font-weight: 600;
   .hero-title{
     font-size: 56px;
     line-height: calc(60 / 56);
+    text-transform: none;
   }
 }
 
@@ -723,7 +701,7 @@ font-weight: 600;
     color: #FFFFFF;
   }
   .footer-form-label {
-      width: 100%;
+    width: 100%;
   }
   .button-footer {
     display: flex;
@@ -740,7 +718,7 @@ font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.06em;
-    color: var(--accent-txt-cl);
+    color:  #FFFFFF;
   }
   
     @media screen and (min-width:768px) {
@@ -784,11 +762,11 @@ font-weight: 600;
   }
   
   .text-footer {
-      
-      color: #E7E9FC;
-      margin: 16px auto 0px;
-      width: 264px;
-      height: 72px;
+    color: #E7E9FC;
+    text-align: left;
+    margin: 16px auto 0px;
+    width: 264px;
+    height: 72px;
   }
   
   .social-footer {
@@ -807,7 +785,7 @@ font-weight: 600;
      }
   
   .footer-title {
-      color: var(--accent-txt-cl);
+      color:  #FFFFFF;
       margin-bottom: 16px;
       text-align: center;
       font-weight: 500;
@@ -832,7 +810,7 @@ font-weight: 600;
   }
   
   .social-icon-footer {
-  fill: var(--accent-txt-cl);
+  fill:  #FFFFFF;
   }
   
   .social-link-footer:hover,
