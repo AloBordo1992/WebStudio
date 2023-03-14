@@ -94,13 +94,14 @@ body {
   | Memu heder
   |============================
 */
-
+.heder{
+  border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 .container-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #E7E9FC;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .logo {
     font-family: 'Raleway';
@@ -175,6 +176,9 @@ color: var(--iris);
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-property: color;
         }
+    .stail-contacts {
+      text-decoration: none;
+    }    
 }
 @media screen and (min-width: 1200px) {
     @media screen and (min-width: 1200px) {
@@ -339,8 +343,7 @@ color: var(--iris);
     font-family: "Roboto";
     background: var(--iris);
     font-weight: 500;
-    font-size: 16px;
-    line-height: calc(24 / 16);
+    
     letter-spacing: 0.04em;
     color:  #FFFFFF;
     display: block;
@@ -367,7 +370,7 @@ color: var(--iris);
     @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-  .box {
+  .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
